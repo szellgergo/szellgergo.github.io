@@ -33,6 +33,10 @@ footer{
     color:white !important;
     
 }
+.slide-text{
+    color: black;
+    text-shadow: 0 0 5px white;
+}
 #centertext{
     border-top: 100px;
     text-align: center !important;
@@ -47,7 +51,7 @@ footer{
 #twomain{
     text-align: center !important;
     background-color: white;
-    border-radius: 5rem;
+    
 }
 #treemain{
     text-align: center !important;
