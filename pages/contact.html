@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/content.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/contact.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -12,39 +12,47 @@
 </head>
 <body>
     <div class="container">
-
     <h1>Üzenj nekünk.</h1>
-    <form action="">
-        <fieldset >
+    
+    <form action="kacsa">
+        <fieldset>
             <legend>Személyes adatok</legend>
-            <div>
-                <label for="name">Név: *</label>
-                <input type="text" name="name" id="name" required>
+            <div class="row">
+                <div class="col-1 col-sm-0 col-md-2"></div>
+                <label class="col-5 col-sm-4 col-md-3" for="name">Név: *</label>                
+                <input class="col-5  col-sm-6 col-md-3" type="text" name="name" id="name" onfocusout="nameValidation()" required>
+                <div class="col-12" id="nameMessegeBox"></div>
             </div>
-            <div>
-                <label for="email">Email cím: *</label>
-                <input type="email" name="email" id="email" required>
-            </div>           
+            <br>
+            <div class="row">
+                <div class="col-1 col-sm-0 col-md-2"></div>
+                <label class="col-5 col-sm-4 col-md-3" for="email">Email cím: *</label>
+                <input class="col-5 col-sm-6 col-md-3" type="email" name="email" id="email" onfocusout="emailValidation()" required>
+                <div class="col-12" id="emailMessegeBox"></div>
+            </div>
+            <br>           
         </fieldset>
         <fieldset>
             <legend>Üzenet</legend>
-            <div>
-                <label for="messege">Üzenet:</label>
-                <textarea name="messege" id="messege" cols="30" rows="10"></textarea>
+            <div class="row">
+                <div class="col-1 col-sm-2 col-md-3"></div>
+                <textarea class="col-10 col-sm-8 col-md-6" name="messege" id="messege" cols="50" rows="10"></textarea>
             </div>
         </fieldset>
+        <br>
         <fieldset>
             <div>
-                <label for="mail">Érdekel mi történik veletek: </label>
+                <label for="mail">Felíratkozok a havi hírlevélre: </label>
                 <input type="checkbox" name="mail" id="mail" value="monthmail">
                 
             </div>
+            <br>
             <div>
                 <button class="btn-primary" type="submit">Üzenet elküldése</button>
             </div>
-        </fieldset>
-        
+        </fieldset>        
     </form>
 </div>
+<script src="/js/contact.js"></script>
 </body>
 </html>
