@@ -33,11 +33,3 @@ function emailValidation(){
     document.getElementById("emailMessegeBox").innerHTML=messege;
     document.getElementById("emailMessegeBox").style.color = messegeColor;
 }
-function sendMessege(){
-    //var url="https://localhost:44315/ToDo/ToDoSave/0?Name=%C3%9Aj%20uzenetek%20az%20Onlineiderol&Leiras=messege%20az%20onlineideatol";
-    
-    var index="http://127.0.0.1:5500/index.html";
-    //window.open(url);
-    //window.location = "https://localhost:44315/OnlineIdea/Contact/";
-
-}
