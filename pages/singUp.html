@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <title>Regisztráció</title>
+</head>
+<body>
+ 
+<form action="/Account/Login?ReturnUrl=%2F" class="form-signin" method="post">
+    <h1 class="h3 mb-3 font-weight-normal">Regisztráció</h1>
+    <input class="form-control text-box single-line" data-val="true" data-val-Name="The Name field is not a valid e-mail address." data-val-required="The Name field is required." id="input" name="Name" placeholder="Felhasználó név" required="autofocus" type="text" value="" />
+    <span class="field-validation-valid text-danger" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+
+    <input class="form-control text-box single-line" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="The Email field is required." id="input" name="Email" placeholder="Email cím" required="autofocus" type="text" value="" />
+    <span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+
+    <input class="form-control text-box single-line" data-val="true" data-val-email="The Group field is not a valid Group address." data-val-required="The Group field is required." id="input" name="Group" placeholder="Cég" required="autofocus" type="text" value="" />
+    <span class="field-validation-valid text-danger" data-valmsg-for="Group" data-valmsg-replace="true"></span>
+
+    <input class="form-control text-box single-line password" data-val="true" data-val-required="The Password field is required." id="inputPassword" name="Password" placeholder="Jelszó" type="password" />
+    <span class="field-validation-valid text-danger" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                 
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Regisztráció</button>
+    </form>
+     
+    
+</body>
+</html>

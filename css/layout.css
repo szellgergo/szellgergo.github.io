@@ -2,8 +2,7 @@
 
 body{
     font-family: 'Galada', cursive !important;
-    background-image: url("../img/img_4156.jpg");
-    background-repeat: repeat;
+    background-color: #028484;
 }
 header{
     position: sticky;
@@ -17,22 +16,6 @@ header{
 header h1, h3{
     text-align: center;
     /*padding: 10px;*/
-}
-iframe{
-    position: sticky;
-    z-index: 1000;
-    top: 0;
-    width: 100%;
-    padding: 0%; 
-    margin-right: 0px !important;  
-    border: 0mm;
-}
-
-footer{
-    overflow: hidden;
-    color:white;
-    background-color: #028484;
-    margin: auto;
 }
 .navbar{
     background-color: #028484 !important;

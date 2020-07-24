@@ -11,6 +11,38 @@
     <title>User Manage</title>
 </head>
 <body>
+
+  <nav class="navbar  navbar-dark navbar-expand-lg">
+    <a class="navbar-brand" href="/index.html"><h1><b>Online Idea</b></h1></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/pages/admin.html">Admin felület<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/pages/contact.html">Írj üzenetet!<span class="sr-only">(current)</span></a>
+        </li>   
+        <li class="nav-item active">
+          <a class="nav-link" href="/pages/login.html">Login felület<span class="sr-only">(current)</span></a>
+        </li>   
+        <li class="nav-item active">
+          <a class="nav-link" href="/pages/singUp.html">Regisztrációs felület<span class="sr-only">(current)</span></a>
+        </li>          
+      </ul>
+    </div>
+  </nav>  
+<br>
+  <div class="alert alert-warning" role="alert">
+    Felhasználó csoportoknak készített felület <br>
+    Ez az első rész a felhasználóknak lenne létrehozva ahol a megfelelő jogosultságú személyek felvehetnének új felhasználókat.<br>
+    És a felhasználóknak első bejelentkezéskor a bejelentkezési felületen egy új felhasználó belépés fül alatt kellene belépni és ott kötelezővé tennék nekik hogy jelszót állítsanak.
+    
+    
+
+  </div>
   <div class="container">   
         <form action="" method="POST">
             <fieldset>
@@ -47,6 +79,61 @@
     </tbody>
   </table>
 </div>
+<br>
+<div class="alert alert-warning" role="alert">
+  <p>Szóval a funkciók kezeléséhez szükséges egy olyan jogosultság kezelő felület ahol a funkciókat kapcsoljuk össze userekkel és userGroupokkal</p>
+  <p>Teszem azt ha bejön egy új cég akit nevezzünk UserGroupnak akkor kell egy admin felület ahol velveszük a UserGroupot</p>
+</div>
+
+<div class="container">   
+  <form action="" method="POST">
+      <fieldset>
+          <legend>Új felhasználó csoport felvétele</legend>      
+              <div class="row text-center">
+                  <label for="username" class="col">UserGroupName: *</label>
+                  <input type="text" class="col mb-3" name="userGroupName" id="userGroupName">
+                  <label for="authority" class="col"> Hasznos adatok: *</label>
+                  <input type="text" class="col mb-3" name="userDataName" id="userDataName">
+                  <div class="col"><button type="submit" class="btn btn-primary">Felvétel</button></div> 
+              </div>           
+      </fieldset> 
+    </form>     
+<br><br>
+<form action="" method="POST">
+  <fieldset>
+      <legend>Új funkció felvétele</legend>      
+          <div class="row text-center">
+              <label for="userGroupName" class="col">UserGroupName: *</label>
+              <input type="text" class="col mb-3" name="userGroupName" id="userGroupName">
+              <label for="userDataName" class="col"> Hasznos adatok: *</label>
+              <input type="text" class="col mb-3" name="userDataName" id="userDataName">
+              <div class="col"><button type="submit" class="btn btn-primary">Felvétel</button></div> 
+          </div>           
+  </fieldset> 
+</form>     
+<br><br>
+<h3>UserGroup/Funkció mátrix</h3>
+<table class="table" id="userGroupTable">
+  <thead>
+    <tr>
+      <th scope="col">FunctionName</th>
+      <th scope="col">TravelTranel</th>
+      <th scope="col">Posta</th>
+      <th scope="col">Inno</th>      
+      <th scope="col">Telekom</th>
+    </tr>
+  </thead>
+<tbody>
+</tbody>
+</table>
+</div>
+<br>
+<div class="alert alert-warning" role="alert">
+  <p>Hogy látható a function és a UserGroup az több több kapcsolattal kapcsolódik és egy ehhez hasonló felületen ahol minden bepipálás és kipipálás logolva lenne és persze felugró ablakkal megkérdeznénk tuti ezt akarod</p>
+  <p>Szóval valahogy így és persze az itt kirakott dolgok 2 külön felület lenne</p>
+</div>
+
+
 <script src="/js/admin.js"></script>
 </body>
 </html>

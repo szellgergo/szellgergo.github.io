@@ -5,6 +5,12 @@ var users=[
     { Id:"2", UserName: "György", Authority: "LV2" },
     { Id:"3", UserName: "Miki György", Authority: "LV1" }
 ];
+var userGroupFunctions=[
+  { functionName:"Hőmérő", UserGroupName1: 0,UserGroupName2: 1,UserGroupName3: 0,UserGroupName4: 1 },
+  { functionName:"Páramérő",UserGroupName1: 1,UserGroupName2: 0,UserGroupName3: 0,UserGroupName4: 0},
+  { functionName:"Haszons riportok",UserGroupName1: 0,UserGroupName2: 1,UserGroupName3: 1,UserGroupName4: 0},
+  { functionName:"Több adat",UserGroupName1: 1,UserGroupName2: 1,UserGroupName3: 0,UserGroupName4: 0}
+];
 
 
 function AddTable(){
@@ -61,6 +67,7 @@ function authorityId(authorityname){
 $(document).ready(function(){
 //Oldal betöltődéskor berakom a Táblázatot a felületre
   AddTable();
+  AddTableUserGroupFunctions();
   $(".btn-warning").click(function(){
     var username=users[$(this).val()].UserName;
     var authorityname=users[$(this).val()].Authority;
@@ -70,3 +77,27 @@ $(document).ready(function(){
     console.log(authorityId(authorityname));
   });
 });
+
+//userGroupTable
+function AddTableUserGroupFunctions(){
+  /*Feltölti a táblázatot*/
+  let tbody = document.querySelector("#userGroupTable tbody");
+  for ( let i = 0; i < userGroupFunctions.length; i++ ) 
+  {
+    let tr = document.createElement("tr");
+    for ( let func of Object.values(userGroupFunctions[i]) ) {
+      let td = document.createElement("td");
+      if(func.length>2){
+        td.innerHTML=func;
+      }else{
+       let func_checkbox=document.createElement("input");
+        func_checkbox.type="checkbox";
+        func_checkbox.checked=func;
+        
+        td.appendChild(func_checkbox);   //func;
+      }
+      tr.appendChild(td);
+    }
+   tbody.appendChild(tr);
+  }
+}
