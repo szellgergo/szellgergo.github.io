@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="/css/admin.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <title>User Manage</title>
+</head>
+<body>
+  <div class="container">   
+        <form action="" method="POST">
+            <fieldset>
+                <legend>User felvétel</legend>      
+                    <div class="row text-center">
+                        <label for="username" class="col">UserName: *</label>
+                        <input type="text" class="col mb-3" name="username" id="username">
+                        <label for="authority" class="col"> Authority: *</label>
+                        <div class="input-group mb-3 col">                       
+                          <select class="custom-select " id="authority">
+                            <option selected>Szintek...</option>
+                            <option id="option_1" value="0">LV1</option>
+                            <option id="option_2" value="1">LV2</option>
+                            <option id="option_3" value="2">LV3</option>
+                            <option id="option_4" value="3">LV4</option>
+                          </select>
+                        </div>
+                        <div class="col"><button type="submit" class="btn btn-primary">Felvétel</button></div> 
+                    </div>           
+            </fieldset> 
+          </form>     
+      <br><br>
+      <h3>User lista</h3>
+  <table class="table" id="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">UserName</th>
+        <th scope="col">Authority</th>
+        <th scope="col">Events</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>
+<script src="/js/admin.js"></script>
+</body>
+</html>
