@@ -4,7 +4,7 @@ var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'A
 			data: {
 				labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
 				datasets: [{
-					label: 'First',
+					label: 'Pára',
 					backgroundColor: window.chartColors.red,
 					borderColor: window.chartColors.red,
 					data: [
@@ -18,7 +18,7 @@ var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'A
 					],
 					fill: false,
 				}, {
-					label: 'Second',
+					label: 'Hőmérő',
 					fill: false,
 					backgroundColor: window.chartColors.blue,
 					borderColor: window.chartColors.blue,
@@ -35,10 +35,10 @@ var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'A
 			},
 			options: {
 				responsive: true,
-				title: {
+				/*title: {
 					display: true,
-					text: ''
-				},
+					text: 'Ez a címe'
+				},*/
 				tooltips: {
 					mode: 'index',
 					intersect: false,
@@ -49,7 +49,7 @@ var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'A
 				},
 				scales: {
 					xAxes: [{
-						display: true,
+						display: false,//Ezt én kapcsoltam ki hogy szebb legyen a kis ábra
 						scaleLabel: {
 							display: true,
 							labelString: 'Month'
