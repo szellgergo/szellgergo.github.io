@@ -18,7 +18,7 @@ var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'A
 					],
 					fill: false,
 				}, {
-					label: 'Hőmérő',
+					label: 'C',
 					fill: false,
 					backgroundColor: window.chartColors.blue,
 					borderColor: window.chartColors.blue,
