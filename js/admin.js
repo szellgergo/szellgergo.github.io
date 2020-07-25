@@ -93,7 +93,6 @@ function AddTableUserGroupFunctions(){
        let func_checkbox=document.createElement("input");
         func_checkbox.type="checkbox";
         func_checkbox.checked=func;
-        
         td.appendChild(func_checkbox);   //func;
       }
       tr.appendChild(td);
