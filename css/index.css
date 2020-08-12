@@ -36,11 +36,21 @@ footer{
 }
 .navbar{
     background-color: #028484 !important;
-    
 }
 .navbar .a{
+    margin-right: 10%;
+    margin-left: 10%;
     color:white !important;
     
+}
+.navbar .navbar-collapse .nav a{
+    color:white !important; /*a menüpontok szövege*/
+}
+#navbarNav ul.nav.navbar-nav.row li.dropdown.col.show ul li a{
+    color:black !important; /*a menüpontok szövege*/
+}
+.navbar-right a{
+    color:white !important; /*a menüpontok szövege*/
 }
 .slide-text{
     color: black;
