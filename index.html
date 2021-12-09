@@ -41,173 +41,26 @@ Zavoianu_Viktória:'',
   function createTable(tableData) {
   var table = document.createElement('table');
   var tableBody = document.createElement('tbody');
-
+  var rowNumber = 1;
   for (const [key, value] of Object.entries(names)) {
     var row = document.createElement('tr');
-      var cell = document.createElement('td');
-      cell.appendChild(document.createTextNode(key));
-      row.appendChild(cell);
-      var cell = document.createElement('td');
-      cell.appendChild(document.createTextNode(value));
-      row.appendChild(cell);
-    
-
+      	var cell = document.createElement('td');
+      	cell.appendChild(document.createTextNode(rowNumber));
+      	row.appendChild(cell);
+	var cell = document.createElement('td');
+      	cell.appendChild(document.createTextNode(key));
+      	row.appendChild(cell);
+      	var cell = document.createElement('td');
+      	cell.appendChild(document.createTextNode(value));
+      	row.appendChild(cell);
+	rowNumber++;
     tableBody.appendChild(row);
   }
 
   table.appendChild(tableBody);
   document.body.appendChild(table);
-	}
+}
   
 </script>
-<table>
-  <tr>
-    <th>Sorszám</th>
-    <th>Név</th>
-    <th>Státusz</th>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>Arnótzky Árpád</td>
-    <td>REVOLUT<input type="checkbox" checked></td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Bitó Norbert</td>
-    <td><input type="checkbox" id="" name="" value=""></td>
-  </tr>
-   <tr>
-     <td>3</td>
-    <td>Csatordai Gyöngyi</td>
-    <td><input type="checkbox" id="" name="" value=""></td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>Fehér Krisztián</td>
-    <td>BANK<input type="checkbox" checked></td>
-  </tr>
-   <tr>
-    <td>5</td>
-    <td>Forgó Máté</td>
-     <td>REVOLUT<input type="checkbox" checked></td>
-  </tr>
-  <tr>
-    <td>6</td>
-    <td>Gyarmati Viktor</td>
-    <td>REVOLUT<input type="checkbox" checked></td>
-  </tr>
-   <tr>
-    <td>7</td>
-    <td>Hercegfalvi Henriett</td>
-    <td>BANK<input type="checkbox" checked></td>
-  </tr>
-  <tr>
-    <td>8</td>
-    <td>Horváth Norbert</td>
-    <td><input type="checkbox"></td>
-  </tr>
-   <tr>
-    <td>9</td>
-    <td>Horváth Szilvia</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  </tr>
-   <tr>
-    <td>9</td>
-    <td>Horváth Péter</td>
-    <td>BANK<input type="checkbox" checked></td>
-  </tr>
-  <tr>
-    <td>10</td>
-    <td>Kalamux Alex</td>
-    <td><input type="checkbox"></td>
-  </tr>
-   <tr>
-    <td>11</td>
-    <td>Koncz Hanna</td>
-    <td>BANK<input type="checkbox" checked></td>
-  </tr>
-  <tr>
-    <td>12</td>
-    <td>Móró Balázs</td>
-    <td>BANK<input type="checkbox" checked></td>
-  </tr>
-   <tr>
-    <td>13</td>
-    <td>Nyéki Zsolt</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>14</td>
-    <td>Pap Rózsa</td>
-    <td>KP<input type="checkbox" checked></td>
-  </tr>
-   <tr>
-    <td>15</td>
-    <td>Papp Evelin</td>
-    <td><input type="checkbox" id="" name="" value=""></td>
-  </tr>
-  <tr>
-    <td>16</td>
-    <td>Rack-Rácz Ildikó</td>
-    <td><input type="checkbox" id="" name="" value=""></td>
-  </tr>
-   <tr>
-    <td>17</td>
-    <td>Reményi Zsolt</td>
-    <td>BANK<input type="checkbox" checked></td>
-  </tr>
-  <tr>
-    <td>18</td>
-    <td>Sárközy Anna Regina</td>
-    <td>REVOLUT<input type="checkbox" checked></td>
-  </tr>
-  <tr>
-    <td>19</td>
-    <td>Székács Klaudia</td>
-    <td><input type="checkbox" ></td>
-  </tr>
-  <tr>
-    <td>20</td>
-    <td>Szekeres Tamás</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>21</td>
-    <td>Széll Gergő</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>22</td>
-    <td>Szólik Ivett</td>
-    <td>BANK<input type="checkbox" checked></td>
-  </tr>
-  <tr>
-    <td>23</td>
-    <td>Tabajdi Szabolcs</td>
-    <td>REVOLUT<input type="checkbox"checked></td>
-  </tr>
-  <tr>
-    <td>24</td>
-    <td>Tóth Roland</td>
-    <td><input type="checkbox" id="" name="" value=""></td>
-  </tr>
-  <tr>
-    <td>25</td>
-    <td>Varga Tamás Ottó</td>
-    <td><input type="checkbox" id="" name="" value=""></td>
-  </tr>
-  <tr>
-    <td>26</td>
-    <td>Vígh Krisztián</td>
-    <td>BANK<input type="checkbox" checked></td>
-  </tr>
-  <tr>
-    <td>27</td>
-    <td>Zavoianu Viktória</td>
-    <td><input type="checkbox" id="" name="" value=""></td>
-  </tr>
-</table>
-
 </body>
 </html>
