@@ -4,58 +4,60 @@
 <body>
 <script>
   
-  let names = [
-    'Arnótzky Árpád' : 'REVOLUT',
-    'Bitó Norbert' : '',
-    'Csatordai Gyöngyi' : '',
-    'Fehér Krisztián' : 'BANK',
-    'Forgó Máté' : 'REVOLUT',
-    'Gyarmati Viktor' : 'REVOLUT',
-    'Hercegfalvi Henriett' : 'BANK',
-    'Horváth Norbert' : '',
-    'Horváth Szilvia' : '',
-    'Horváth Péter' : 'BANK',
-    'Kalamux Alex' : '',
-    'Koncz Hanna' : 'BANK',
-    'Móró Balázs' : 'BANK',
-    'Nyéki Zsolt' : '',
-    'Pap Rózsa' : 'KP',
-    'Papp Evelin': '',
-    'Rack-Rácz Ildikó' : '',
-    'Reményi Zsolt' : 'BANK',
-    'Sárközy Anna Regina' : 'REVOLUT',
-    'Székács Klaudia' : '',
-    'Szekeres Tamás' : '',
-    'Széll Gergő' : 'TERMÉSZETBEN',
-    'Szólik Ivett' : 'BANK',
-    'Tabajdi Szabolcs' : 'REVOLUT',
-    'Tóth Roland' : '',
-    'Varga Tamás Ottó' : '',
-    'Vígh Krisztián' : 'BANK',
-    'Zavoianu Viktória' : '',
-  ];
+  const names = {
+    Arnótzky_Árpád:'REVOLUT',
+Bitó_Norbert:'',
+Csatordai_Gyöngyi:'',
+Fehér_Krisztián:'BANK',
+Forgó_Máté:'REVOLUT',
+Gyarmati_Viktor:'REVOLUT',
+Hercegfalvi_Henriett:'BANK',
+Horváth_Norbert:'',
+Horváth_Szilvia:'',
+Horváth_Péter:'BANK',
+Kalamux_Alex:'',
+Koncz_Hanna:'BANK',
+Móró_Balázs:'BANK',
+Nyéki_Zsolt:'',
+Pap_Rózsa:'KP',
+Papp_Evelin:_'',
+Rack-Rácz_Ildikó:'',
+Reményi_Zsolt:'BANK',
+Sárközy_Anna_Regina:'REVOLUT',
+Székács_Klaudia:'',
+Szekeres_Tamás:'',
+Széll_Gergő:'TERMÉSZETBEN',
+Szólik_Ivet':'BANK',
+Tabajdi_Szabolcs':'REVOLUT',
+Tóth_Roland:'',
+Varga_Tamás_Ottó:'',
+Vígh_Krisztián:'BANK',
+Zavoianu_Viktória:'',
+  };
   
+  
+ createTable(names);
   
   function createTable(tableData) {
   var table = document.createElement('table');
   var tableBody = document.createElement('tbody');
 
-  tableData.forEach(function(rowData) {
+  for (const [key, value] of Object.entries(names)) {
     var row = document.createElement('tr');
-
-    rowData.forEach(function(cellData) {
       var cell = document.createElement('td');
-      cell.appendChild(document.createTextNode(cellData));
+      cell.appendChild(document.createTextNode(key));
       row.appendChild(cell);
-    });
+      var cell = document.createElement('td');
+      cell.appendChild(document.createTextNode(value));
+      row.appendChild(cell);
+    
 
     tableBody.appendChild(row);
-  });
+  }
 
   table.appendChild(tableBody);
   document.body.appendChild(table);
-}
-  createTable(names);
+	}
   
 </script>
 <table>
