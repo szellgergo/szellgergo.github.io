@@ -19,7 +19,7 @@
 	Koncz_Hanna:'BANK',
 	Senoior_Árpád:'KP',
 	Móró_Balázs:'BANK',
-	Nyéki_Zsolt:'',
+	Nyéki_Zsolt:'BANK',
 	Pap_Rózsa:'KP',
 	Papp_Evelin:'',
 	Rack_Rácz_Ildikó:'BANK',
@@ -44,7 +44,8 @@
   var tableBody = document.createElement('tbody');
   var rowNumber = 1;
   for (const [key, value] of Object.entries(names)) {
-    var row = document.createElement('tr');
+    	var row = document.createElement('tr');
+	row.style.color = value == '' ? 'red' : 'green';
       	var cell = document.createElement('td');
       	cell.appendChild(document.createTextNode(rowNumber));
       	row.appendChild(cell);
@@ -55,7 +56,7 @@
       	cell.appendChild(document.createTextNode(value));
       	row.appendChild(cell);
 	rowNumber++;
-    tableBody.appendChild(row);
+    	tableBody.appendChild(row);
   }
 
   table.appendChild(tableBody);
