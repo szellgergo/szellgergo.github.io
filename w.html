@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="">
+ 
+
+<input type="text" ng-model="full" >
+<input type="text" ng-model="success">
+<br><br>
+<br>
+{{ full % 2 }}<br>
+{{ (full - (14 * (success / 100))) }} :
+{{ (full - (14 * (success / 100))) % 60 }}
+</div>
+</body>
+</html>
