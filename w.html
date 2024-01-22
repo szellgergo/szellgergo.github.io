@@ -10,9 +10,8 @@
 <input type="text" ng-model="success">
 <br><br>
 <br>
-{{ full % 2 }}<br>
-{{ (full - (14 * (success / 100))) }} :
-{{ (full - (14 * (success / 100))) % 60 }}
+{{ (success - (14 * (full / 100)))-((success - (14 * (full / 100))) % 1) }}:
+{{ ((success - (14 * (full / 100)))-(success - (14 * (full / 100))) - ((success - (14 * (full / 100))) % 1)) * -60}}
 </div>
 </body>
 </html>
