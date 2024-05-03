@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visszaszámláló</title>
+</head>
+<body>
+
+<div id="countdown"></div>
+
+<script>
+// Cél dátum létrehozása a timestamp alapján (2024. április 29.)
+var targetDate = new Date(1717106400 * 1000);
+
+// Visszaszámláló frissítése minden másodpercben
+var countdownInterval = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = targetDate - now;
+
+    // A számítások a nap, óra, perc és másodperc kiszámítására
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Az eredmény megjelenítése a HTML elemen belül
+    var countdownElement = document.getElementById("countdown");
+    countdownElement.innerHTML = "Visszaszámlálás: " + days + " nap " + hours + " óra " + minutes + " perc " + seconds + " másodperc ";
+
+    // Ellenőrzés, hogy lejárt-e a visszaszámláló
+    if (distance < 0) {
+        clearInterval(countdownInterval);
+        countdownElement.innerHTML = "A határidő lejárt";
+    }
+}, 1000); // Frissítés minden másodpercben
+</script>
+
+</body>
+</html>
